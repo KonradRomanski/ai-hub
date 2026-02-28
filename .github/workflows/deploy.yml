@@ -2,8 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]           # albo master, albo inna gałąź
-  workflow_dispatch:           # możesz ręcznie uruchomić z interfejsu
+    branches: [master]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -36,7 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist                # ← Vite domyślnie buduje do dist/
+          path: ./dist
 
   deploy:
     needs: build
