@@ -2,11 +2,12 @@ import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  base: '/', // ← ZMIEŃ na '/ai-hub/' jeśli nazwa repo jest inna niż username.github.io
+  base: '/ai-hub/',
+
   plugins: [
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico'],
+      includeAssets: ['favicon.ico', 'icon-192.png', 'icon-512.png'],
       manifest: {
         name: 'AI Hub Polska',
         short_name: 'AI Hub',
